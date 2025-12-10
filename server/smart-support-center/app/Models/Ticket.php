@@ -22,5 +22,11 @@ class Ticket extends Model
     {
         return $this->belongsTo(User::class, 'assigned_agent_id');
     }
+
+    // A ticket has many messages
+    public function messages()
+    {
+        return $this->hasMany(Message::class);
+    }
 }
 
