@@ -78,4 +78,8 @@ public function tickets()
 {
     return $this->hasMany(Ticket::class, 'customer_id');
 }
+public function messages()
+{
+    return $this->hasMany(Message::class);
+}
 }
