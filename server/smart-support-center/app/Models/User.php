@@ -72,4 +72,10 @@ public function getJWTCustomClaims()
 {
     return [];
 }
+
+// A user has many tickets each customer can create multiple tickets
+public function tickets()
+{
+    return $this->hasMany(Ticket::class, 'customer_id');
+}
 }
